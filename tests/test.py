@@ -1,11 +1,12 @@
 
 import time
-SELENIUM_HUB = 'http://localhost:4444/wd/hub'
+SELENIUM_HUB = 'http://selenium-hub:4444/wd/hub'
 
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-driver = None
+driver = webdriver
+
 try:
 
     print("starting driver")

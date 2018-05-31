@@ -32,7 +32,10 @@ services:
     container_name: 'python'
     links:
       - selenium-hub:hub
-    command: 'tail -f /dev/null'
+    command: >
+      bash -c 'pip install --upgrade pip &&
+      pip install selenium &&
+      tail -f /dev/null'
     working_dir: '/root/'
     volumes:
       - ./tests/:/root/tests/
