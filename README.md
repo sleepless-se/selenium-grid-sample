@@ -32,29 +32,21 @@ Run sample program.
 python tests/sample.py
 ```
 
-##How to check the selenium browser.
+## How to check the selenium browser.
 
-###Connect server for Mac
+### Connect server for Mac
 
 `Finder - Go - Connect server`
 
 Enter this address.
 
-`vnc://localhost:5900` then connect.
+`vnc://localhost:5900` then connect.Password is `secret`.Now you can see the selenium!!
 
-Password is `secret`.
+## How to update sample program.
 
-Now you can see the selenium!!
+Go to your local tests folder in selenium-grid-sample.You can see `screenshots.png`. It took when you run sample.py. The file comes from Python container.
 
-##How to update sample program.
-
-Go to your local tests folder in selenium-grid-sample.
-
-You can see `screenshots.png`. It took when you run sample.py
-
-The file comes from Python container.
-
-So you can edit sample.py then run the file from Python container.
+So Python container /root/tests/ and selenium-grid-sample/tests/ are shared. You can edit sample.py in your local machine and apply in the container. You can run the file from Python container.
 
 ```
 python tests/sample.py
