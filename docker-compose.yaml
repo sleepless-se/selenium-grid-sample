@@ -28,14 +28,10 @@ services:
   #     - HUB_PORT=4444
 
   python:
-    image: python:3
+    image: inodb/python-selenium:latest
     container_name: 'python'
     links:
       - selenium-hub:hub
-    command: >
-      bash -c 'pip install --upgrade pip &&
-      pip install selenium &&
-      tail -f /dev/null'
     working_dir: '/root/'
     volumes:
       - ./tests/:/root/tests/
